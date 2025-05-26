@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Standard favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+
+<!-- Apple Touch Icon për iOS -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+<!-- Android Manifest -->
+<link rel="manifest" href="/assets/images/site.webmanifest">
+
+<!-- Safari Pinned Tab -->
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#be2121">
+
+<!-- Meta për Microsoft/Windows -->
+<meta name="msapplication-TileColor" content="#be2121">
+<meta name="theme-color" content="#be2121">
+
+
+
   <title>MX Tech Solutions | Your Trusted Partner in Web Solutions</title>
+
   <meta name="description" content="MX Tech Solutions offers expert web development, design, SEO, and digital marketing services in Manchester. Contact us to bring your vision to life.">
   <meta name="keywords" content="web development, web design, SEO, Shopify, e-commerce, custom web applications, UI/UX design, responsive design, graphic design, branding, prototyping, content creation, community management, influencer marketing, social media ads, analytics, pay-per-click, email marketing, content marketing, video editing, editing and post-production, color correction, motion graphics, sound design, visual effects, mobile app development, cloud solutions, AI, machine learning, cybersecurity, Manchester">
   <meta name="author" content="MX Tech Solutions">
@@ -59,15 +80,25 @@
     gtag('js', new Date());
     gtag('config', 'G-FHCZHHHJQD');
   </script>
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
 </head>
 <body>
+
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" aria-label="Main navigation">
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-none fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="./assets/images/black-logo-transparent.png" alt="MX Tech Solutions Logo" width="40" height="40" loading="lazy">
-        <span class="ms-2 fw-bold" style="color:#3f2323; font-family:'Poppins',sans-serif;">MX TECH SOLUTIONS</span>
+        <img 
+          src="./assets/images/black-logo-transparent.png" 
+          alt="MX Tech Solutions Logo" 
+          width="40" height="40" loading="lazy"
+          class="navbar-logo"
+        >
+        <span class="ms-2 fw-bold brand-text">MX TECH SOLUTIONS</span>
       </a>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -101,20 +132,32 @@
   </nav>
   <!-- /Navbar -->
 
+  <!-- Dark Mode Toggle Button (floating, always visible) -->
+<button id="darkModeToggle" class="btn btn-outline-dark position-fixed"
+style="top: 28px; right: 32px; z-index: 1051; border-radius: 1.4rem; padding: 0.44rem 1.2rem; box-shadow: 0 2px 14px 0 rgba(60,60,60,0.09);">
+<span id="darkModeIcon" style="font-size:1.2rem;">🌙</span>
+</button>
+
+
+
     <main>
       <!-- Header Section -->
-      <header class="bg-white py-5">
+      <header class="main-header bg-white py-5">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start" data-aos="fade-up">
-              <h1 class="fw-bold mb-3" style="font-family: 'Poppins',sans-serif;">
+              <h1 class="fw-bold mb-3 brand-title">
                 MX TECH SOLUTIONS
               </h1>
               <p class="lead mb-3">
                 Full-Service Web Development, Design & Digital Marketing Agency.
               </p>
-              <p class="mb-4" style="font-size: 1.1rem;">
-                <span style="color:#be2121; font-weight:600;">Websites</span>, <span style="color:#be2121; font-weight:600;">E-commerce</span>, <span style="color:#be2121; font-weight:600;">SEO</span>, <span style="color:#be2121; font-weight:600;">Social Media</span>, <span style="color:#be2121; font-weight:600;">Branding</span> & more — everything your business needs online.
+              <p class="mb-4 main-header-keywords">
+                <span class="keyword-red">Websites</span>, 
+                <span class="keyword-red">E-commerce</span>, 
+                <span class="keyword-red">SEO</span>, 
+                <span class="keyword-red">Social Media</span>, 
+                <span class="keyword-red">Branding</span> & more — everything your business needs online.
               </p>
               <!-- Mini badges style services row -->
               <div class="mb-4">
@@ -130,13 +173,13 @@
                 Trusted by businesses in Manchester, across the UK, and worldwide.
               </p>
             </div>
-            <div class="col-md-6 text-center" data-aos="fade-left">
-              <img src="./assets/images/header-bg.jpg" class="img-fluid rounded" alt="Web solutions team at work" loading="lazy" style="max-height:350px;">
+            <div class="col-md-6 text-center d-flex justify-content-center" data-aos="fade-left">
+              <dotlottie-player src="https://lottie.host/03eba240-b0c7-4572-af37-f410b1d8ebb3/aQJEgp1xH1.lottie" background="transparent" speed="1" style="width: 400px; height: 400px" loop autoplay></dotlottie-player>
             </div>
           </div>
         </div>
       </header>
-    </main>
+      
     
     <!-- Services Section -->
     <section id="services" class="py-5 bg-light">
@@ -383,6 +426,53 @@
       </div>
     </section>
 
+    <!-- Case Studies / Success Stories -->
+<section id="case-studies" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold">Success Stories 🚀</h2>
+      <p class="lead">See how we've helped businesses grow and succeed.</p>
+    </div>
+    <div class="row g-4">
+      <!-- Case Study 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm case-study-card">
+          <div class="card-body">
+            <h5 class="fw-bold mb-2">Palushi Brothers LTD</h5>
+            <p class="text-muted small mb-3"><i class="fas fa-industry text-primary me-2"></i>Construction • London</p>
+            <p class="mb-3">We redesigned their website and improved SEO. Result: <span class="fw-bold text-success">+60% more website leads</span> in 4 months.</p>
+            <span class="badge bg-success">+60% Leads</span>
+          </div>
+        </div>
+      </div>
+      <!-- Case Study 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="card h-100 shadow-sm case-study-card">
+          <div class="card-body">
+            <h5 class="fw-bold mb-2">Besi's Imbiss</h5>
+            <p class="text-muted small mb-3"><i class="fas fa-utensils text-danger me-2"></i>Snackbar • Germany</p>
+            <p class="mb-3">We launched a new e-commerce menu and social media strategy. Result: <span class="fw-bold text-success">+45% more online orders</span> in 2 months.</p>
+            <span class="badge bg-info text-dark">+45% Orders</span>
+          </div>
+        </div>
+      </div>
+      <!-- Case Study 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm case-study-card">
+          <div class="card-body">
+            <h5 class="fw-bold mb-2">KSZ Weiden</h5>
+            <p class="text-muted small mb-3"><i class="fas fa-school text-primary me-2"></i>School • Germany</p>
+            <p class="mb-3">Custom web app for managing schedules and documents. Result: <span class="fw-bold text-success">+90% staff satisfaction</span> and smoother processes.</p>
+            <span class="badge bg-primary">+90% Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Stats -->
     <section class="py-5 bg-light" id="stats">
       <div class="container text-center">
         <div class="row g-4">
@@ -413,9 +503,7 @@
         </div>
       </div>
     </section>
-    
-    
-
+  
     <!-- About Us Section -->
     <section id="about" class="py-5 bg-light">
       <div class="container">
@@ -673,121 +761,84 @@
     </section>
     
     <!-- Testimonials -->
-<section id="testimonials" class="py-5 position-relative" style="overflow:hidden;">
+    <!-- Testimonials Carousel -->
+<section id="testimonials" class="py-5">
   <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="fw-bold mb-2">
-        Client Reviews
-        <span class="ms-2" style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-      </h2>
-      <p class="lead text-muted">
-        Over <span class="fw-bold text-danger">50+</span> satisfied businesses worldwide 🌍 <br>
-        Here’s why they trust <span class="fw-bold text-primary">MX Tech Solutions</span>!
-      </p>
-    </div>
-    <div class="row g-4 justify-content-center">
-      <!-- Testimonial 1 -->
-      <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
-        <div class="card h-100 shadow testimonial-modern border-0 text-center">
-          <div class="card-body px-4 py-4 d-flex flex-column align-items-center">
-            <div class="testimonial-quote mb-3">
-              <i class="fas fa-quote-left text-danger fs-1"></i>
-            </div>
-            <p class="fs-6 fst-italic flex-grow-1">
-              “Fast, reliable, and creative! Our website is now our best sales tool. 10/10 service.”
-            </p>
-            <div class="testimonial-meta d-flex align-items-center gap-3 mt-3">
-              <div class="text-start">
-                <span class="fw-bold d-block">Anja H.</span>
-                <small class="text-muted">Germany</small>
+    <h2 class="text-center fw-bold mb-3" data-aos="fade-up">What Our Clients Say ⭐</h2>
+    <p class="text-center mb-5">We're proud of the work we do and the relationships we build.<br>Here's what some clients say:</p>
+    <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="card mx-auto shadow testimonial-card">
+            <div class="card-body text-center">
+              <img src="assets/images/client2.png" alt="Anja H." class="rounded-circle mb-3" width="70" height="70" loading="lazy">
+              <blockquote class="blockquote mb-2">
+                <p>"The team delivered excellent results for our project. Their work exceeded all our expectations!"</p>
+              </blockquote>
+              <div class="mb-1">
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               </div>
-            </div>
-            <div class="mt-2">
-              <span class="text-warning">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </span>
+              <footer class="blockquote-footer mt-1">Anja H. <cite title="Company">CEO, German Business</cite></footer>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Testimonial 2 -->
-      <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="120">
-        <div class="card h-100 shadow testimonial-modern border-0 text-center">
-          <div class="card-body px-4 py-4 d-flex flex-column align-items-center">
-            <div class="testimonial-quote mb-3">
-              <i class="fas fa-quote-left text-danger fs-1"></i>
-            </div>
-            <p class="fs-6 fst-italic flex-grow-1">
-              “Great support and transparent process. They made everything easy for us as a startup.”
-            </p>
-            <div class="testimonial-meta d-flex align-items-center gap-3 mt-3">
-              <div class="text-start">
-                <span class="fw-bold d-block">Mirush P.</span>
-                <small class="text-muted">United Kingdom</small>
+
+        <div class="carousel-item">
+          <div class="card mx-auto shadow testimonial-card">
+            <div class="card-body text-center">
+              <img src="assets/images/client4.png" alt="Mirush P." class="rounded-circle mb-3" width="70" height="70" loading="lazy">
+              <blockquote class="blockquote mb-2">
+                <p>"Our website looks fantastic and works perfectly! The attention to detail was amazing."</p>
+              </blockquote>
+              <div class="mb-1">
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               </div>
-            </div>
-            <div class="mt-2">
-              <span class="text-warning">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-              </span>
+              <footer class="blockquote-footer mt-1">Mirush P. <cite title="Company">Founder, Palushi Brothers LTD</cite></footer>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Testimonial 3 -->
-      <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
-        <div class="card h-100 shadow testimonial-modern border-0 text-center">
-          <div class="card-body px-4 py-4 d-flex flex-column align-items-center">
-            <div class="testimonial-quote mb-3">
-              <i class="fas fa-quote-left text-danger fs-1"></i>
-            </div>
-            <p class="fs-6 fst-italic flex-grow-1">
-              “Professional team, always on time. The design stands out and we’ve received amazing feedback!”
-            </p>
-            <div class="testimonial-meta d-flex align-items-center gap-3 mt-3">
-              <div class="text-start">
-                <span class="fw-bold d-block">Gentjan M.</span>
-                <small class="text-muted">Albania</small>
+
+        <div class="carousel-item">
+          <div class="card mx-auto shadow testimonial-card">
+            <div class="card-body text-center">
+              <img src="assets/images/client4.png" alt="Gentjan M." class="rounded-circle mb-3" width="70" height="70" loading="lazy">
+              <blockquote class="blockquote mb-2">
+                <p>"Thanks to their expertise, our project was a great success. Their professionalism stood out!"</p>
+              </blockquote>
+              <div class="mb-1">
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               </div>
-            </div>
-            <div class="mt-2">
-              <span class="text-warning">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </span>
+              <footer class="blockquote-footer mt-1">Gentian K. <cite title="Company">Owner, Genti Group Electronic</cite></footer>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Testimonial 4 -->
-      <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="card h-100 shadow testimonial-modern border-0 text-center">
-          <div class="card-body px-4 py-4 d-flex flex-column align-items-center">
-            <div class="testimonial-quote mb-3">
-              <i class="fas fa-quote-left text-danger fs-1"></i>
-            </div>
-            <p class="fs-6 fst-italic flex-grow-1">
-              “From branding to web shop — all in one place, and done perfectly. Highly recommend their team.”
-            </p>
-            <div class="testimonial-meta d-flex align-items-center gap-3 mt-3">
-              <div class="text-start">
-                <span class="fw-bold d-block">Besmir M.</span>
-                <small class="text-muted">Germany</small>
+
+        <div class="carousel-item">
+          <div class="card mx-auto shadow testimonial-card">
+            <div class="card-body text-center">
+              <img src="assets/images/client3.png" alt="Besmir M." class="rounded-circle mb-3" width="70" height="70" loading="lazy">
+              <blockquote class="blockquote mb-2">
+                <p>"They created a beautiful and functional website for us. It has already boosted our business!"</p>
+              </blockquote>
+              <div class="mb-1">
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               </div>
-            </div>
-            <div class="mt-2">
-              <span class="text-warning">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </span>
+              <footer class="blockquote-footer mt-1">Besmir M. <cite title="Company">Manager, Besi's Imbiss</cite></footer>
             </div>
           </div>
         </div>
+
       </div>
-      <!-- You can add more testimonials for variety! -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </div>
 </section>
-
-
 
     <!-- Contact Section -->
     <section id="contact" class="py-5 bg-light position-relative">
@@ -881,147 +932,167 @@
     </script>
     
     <!-- FAQ Section -->
-<section id="faq" class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-3" data-aos="fade-up">FAQ 🤔</h2>
-    <p class="text-center mb-4 text-muted fs-5">
-      Frequently Asked Questions<br>
-      If you can’t find the answer you’re looking for, <a href="contact.html" style="color: #be2121;">contact us</a> directly.
-    </p>
-    <div class="row justify-content-center">
-      <div class="col-lg-8" data-aos="fade-up">
-        <div class="accordion" id="faqAccordion">
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq1-heading">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-                1. What services do you offer? 🛠️
-              </button>
-            </h2>
-            <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                We provide a comprehensive range of digital solutions: <br>
-                <b>Web Development</b>, <b>Web Design</b>, <b>SEO</b>, <b>Digital Marketing</b>, <b>Social Media</b>, <b>E-commerce</b>, <b>Video Editing</b>, and more.
+    <section id="faq" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4" data-aos="fade-up">FAQ 🤔</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion modern-faq" id="faqAccordion">
+              <!-- 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq1-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                    <span class="me-2 faq-icon">+</span>
+                    What services do you offer? 🛠️
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>We provide a full spectrum of digital services</strong> to help businesses grow online. This includes bespoke web development, responsive web design, advanced SEO strategies, e-commerce solutions, digital marketing, branding, graphic design, content creation, video editing, and social media management. Our team is equipped to handle projects of any scale, ensuring your online presence is not only beautiful, but also effective and results-driven.
+                  </div>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq2-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    <span class="me-2 faq-icon">+</span>
+                    How do I get started? 🚀
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>Getting started is simple and seamless!</strong> Contact us through our website form, email, or by phone. Once we connect, we’ll listen to your needs, discuss your vision, and offer a free initial consultation. From there, we’ll outline a clear project plan, timeline, and budget. We pride ourselves on clear communication and transparent processes from start to finish, so you’re always in control.
+                  </div>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq3-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    <span class="me-2 faq-icon">+</span>
+                    Can you redesign my existing website? 🎨
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>Absolutely!</strong> We specialize in modernizing outdated websites, improving UI/UX, and ensuring that your digital presence keeps pace with current trends and technologies. Whether you want a fresh look, better mobile responsiveness, or more advanced features, we can transform your existing site into a high-performing, professional platform that reflects your brand’s personality and goals.
+                  </div>
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq4-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    <span class="me-2 faq-icon">+</span>
+                    What technologies do you use? 💻
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>We work with the latest, most reliable technologies</strong> to deliver robust, secure, and scalable solutions. Our stack includes HTML5, CSS3, JavaScript (including React, Vue, Next.js), PHP, WordPress, Shopify, WooCommerce, Node.js, and various APIs. We always select the right technology according to your project’s requirements, ensuring high performance and future scalability.
+                  </div>
+                </div>
+              </div>
+              <!-- 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq5-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                    <span class="me-2 faq-icon">+</span>
+                    How long does it take to build a website? ⏳
+                  </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>Project timelines depend on the complexity and features required.</strong> Simple websites can be ready in 1-2 weeks, while larger e-commerce or custom web apps may take 4-8 weeks or more. After our initial consultation, we’ll provide a precise timeline. We work efficiently but never compromise on quality or attention to detail.
+                  </div>
+                </div>
+              </div>
+              <!-- 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq6-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                    <span class="me-2 faq-icon">+</span>
+                    Do you offer ongoing support and maintenance? 🔧
+                  </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>Yes, we believe support doesn’t stop at launch.</strong> We offer ongoing maintenance packages that cover security updates, backups, content updates, technical troubleshooting, and even further development as your business grows. Our support is proactive, fast, and reliable—your peace of mind is our priority.
+                  </div>
+                </div>
+              </div>
+              <!-- 7 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq7-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                    <span class="me-2 faq-icon">+</span>
+                    What is SEO and why is it important? 📈
+                  </button>
+                </h2>
+                <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq7-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>SEO (Search Engine Optimization) is essential</strong> to ensure your website can be found by your target audience on Google and other search engines. Our SEO services include keyword research, content optimization, technical SEO, local SEO, and link building. We use proven strategies to help you rank higher, increase organic traffic, and drive more leads to your business.
+                  </div>
+                </div>
+              </div>
+              <!-- 8 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq8-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                    <span class="me-2 faq-icon">+</span>
+                    Can I track my website’s performance? 📊
+                  </button>
+                </h2>
+                <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faq8-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>Definitely!</strong> We integrate Google Analytics, Search Console, and other tracking tools to provide detailed reports on your website’s traffic, conversions, user behavior, and growth trends. You’ll always have full visibility and control over your digital performance.
+                  </div>
+                </div>
+              </div>
+              <!-- 9 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq9-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                    <span class="me-2 faq-icon">+</span>
+                    Is mobile responsiveness included? 📱
+                  </button>
+                </h2>
+                <div id="faq9" class="accordion-collapse collapse" aria-labelledby="faq9-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>Yes, mobile-first design is standard in all our projects.</strong> We guarantee your website looks and works perfectly across all devices, from desktops to smartphones and tablets. This improves user experience and also boosts your Google ranking.
+                  </div>
+                </div>
+              </div>
+              <!-- 10 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq10-heading">
+                  <button class="accordion-button collapsed d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                    <span class="me-2 faq-icon">+</span>
+                    How can I get a quote? 💬
+                  </button>
+                </h2>
+                <div id="faq10" class="accordion-collapse collapse" aria-labelledby="faq10-heading" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <strong>Simply use our contact form, call us, or send an email.</strong> Share a few details about your project or goals and we’ll provide you with a free, no-obligation quote tailored to your requirements. Our pricing is transparent and competitive, with no hidden fees.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq2-heading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                2. How do I get started with your services? 🚀
-              </button>
-            </h2>
-            <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Just <a href="contact.html" style="color: #be2121;">contact us</a> or click <b>Start a Project</b> at the top of the page. We'll schedule a free consultation to discuss your needs!
-              </div>
-            </div>
-          </div>
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq3-heading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                3. Can you redesign an existing website? 🎨
-              </button>
-            </h2>
-            <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Absolutely! We offer both full redesigns and quick modern refreshes for existing websites.
-              </div>
-            </div>
-          </div>
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq4-heading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                4. Do you work with clients outside the UK? 🌍
-              </button>
-            </h2>
-            <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes! Our team works with clients from all over the world. We communicate easily via email, chat, and video calls.
-              </div>
-            </div>
-          </div>
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq5-heading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                5. How long does a website project take? ⏳
-              </button>
-            </h2>
-            <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Project timelines depend on complexity, but typically range from 2 to 6 weeks for most websites. We'll give you a clear timeline before starting.
-              </div>
-            </div>
-          </div>
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq6-heading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
-                6. Will my website be mobile-friendly? 📱
-              </button>
-            </h2>
-            <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Of course! All our websites are 100% responsive and optimized for mobile, tablet, and desktop.
-              </div>
-            </div>
-          </div>
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq7-heading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
-                7. What if I need help after my website goes live? 💬
-              </button>
-            </h2>
-            <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq7-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                We offer ongoing support, maintenance, and updates. You can always reach out for help, changes, or new features.
-              </div>
-            </div>
-          </div>
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq8-heading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
-                8. What payment methods do you accept? 💳
-              </button>
-            </h2>
-            <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faq8-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                We accept all major credit/debit cards, PayPal, bank transfer, and more.
-              </div>
-            </div>
-          </div>
-          <!-- Accordion Item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq9-heading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
-                9. Do you offer custom solutions? 💡
-              </button>
-            </h2>
-            <div id="faq9" class="accordion-collapse collapse" aria-labelledby="faq9-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes, every project is tailored to your unique needs! Tell us your goals and we'll build a solution just for you.
-              </div>
-            </div>
-          </div>
-          <!-- Add more FAQ items as needed -->
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    
 
-  <!-- Sticky CTA Button -->
+
+  <!-- Sticky CTA Button 
 <a href="start-a-project.html" class="sticky-cta-btn" aria-label="Start a Project">
   <i class="fas fa-rocket me-2"></i> Start a Project
-</a>
+</a> -->
 
 <!-- Newsletter -->
-<section class="newsletter py-4 bg-light">
+    <section class="newsletter py-4 bg-light">
   <div class="container text-center">
     <form action="#" method="POST" class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
       <input type="email" name="email" class="form-control w-auto" placeholder="Your email address" required style="max-width:240px;">
@@ -1029,7 +1100,7 @@
     </form>
     <div class="mt-2 small text-muted">Get tips & digital news. No spam!</div>
   </div>
-</section>
+    </section>
 
 <!-- Trust Icons -->
 <div class="trust-seals d-flex flex-wrap gap-3 justify-content-center align-items-center py-2">
@@ -1050,10 +1121,50 @@
   <span id="proof-message"></span>
 </div>
 
+<!-- Go to Top Button -->
+<button type="button" id="goToTopBtn" class="btn btn-danger position-fixed bottom-0 end-0 m-3 d-none"
+  aria-label="Scroll to top" data-bs-toggle="tooltip" data-bs-placement="left" title="Back to Top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Newsletter Popup -->
+<div id="newsletter-popup" class="newsletter-popup d-none">
+  <div class="newsletter-content">
+    <button class="close-btn" id="close-newsletter" aria-label="Close">&times;</button>
+    <h4 class="fw-bold mb-2">Subscribe & Get a Free Ebook or <span class="text-danger">10% OFF!</span></h4>
+    <p class="mb-3 text-muted fs-6">Join our newsletter to receive the latest updates and get your freebie instantly in your inbox.</p>
+    <form action="https://formsubmit.co/needx00@gmail.com" method="POST" id="newsletter-form">
+      <!-- Hidden fields for FormSubmit settings -->
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
+      <input type="hidden" name="_subject" value="New Newsletter Signup!">
+      <input type="hidden" name="_autoresponse"
+        value="Thank you for subscribing to MX Tech Solutions! 🎉
+
+Your free ebook is ready to download:
+https://drive.google.com/file/d/1olbzft1wd79wlP-FEb9gKqwO0TPj5bWV/view?usp=drive_link
+
+You will receive updates and exclusive offers soon.
+
+Best regards,
+MX Tech Solutions Team">
+      <!-- Email field -->
+      <input type="email" name="email" class="form-control mb-2" placeholder="Your email address" required>
+      <button type="submit" class="btn btn-danger w-100 fw-bold">Get My Free Ebook!</button>
+      <div class="form-check mt-3">
+        <input class="form-check-input" type="checkbox" value="yes" id="ebook-checkbox" checked disabled>
+        <label class="form-check-label" for="ebook-checkbox">
+          Receive a free ebook or 10% discount on your first service.
+        </label>
+      </div>
+    </form>
+  </div>
+</div>
 
 
 
-  </main>
+
+
+</main>
 
 
   
@@ -1122,142 +1233,81 @@
 </footer>
 
 <script>
+  // DARK MODE TOGGLE SCRIPT
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Social Proof Popup - Dinamike, vetëm 1 herë për vizitor
-    const names = [
-      "Gentjan Mara", "Anja Hoffman", "Sebastian Meier", "John Smith", "Emily Watson",
-      "Max Müller", "Sarah Taylor", "Lucas Weber", "David Johnson", "Laura Schmidt"
-    ];
-    const actions = [
-      "Just delivered a website for <b>{name}</b> {time} ago!",
-      "Completed an e-commerce project for <b>{name}</b> {time} ago!",
-      "Launched a new brand identity for <b>{name}</b> {time} ago!",
-      "Deployed a mobile app for <b>{name}</b> {time} ago!",
-      "Finished SEO optimization for <b>{name}</b> {time} ago!"
-    ];
-    const times = [
-      "2 hours", "15 minutes", "1 day", "30 minutes", "45 minutes",
-      "3 hours", "1 hour", "4 hours", "20 minutes", "50 minutes"
-    ];
-    function getRandom(arr) {
-      return arr[Math.floor(Math.random() * arr.length)];
-    }
-    function randomProofMsg() {
-      const name = getRandom(names);
-      const action = getRandom(actions);
-      const time = getRandom(times);
-      return action.replace("{name}", name).replace("{time}", time);
-    }
-    const proofKey = 'mxtech_social_proof_shown';
-    if (!localStorage.getItem(proofKey)) {
-      setTimeout(() => {
-        let popup = document.getElementById('social-proof-popup');
-        let msg = document.getElementById('proof-message');
-        if (popup && msg) {
-          msg.innerHTML = randomProofMsg();
-          popup.style.display = 'flex';
-          setTimeout(() => { popup.style.display = 'none'; }, 7000);
-          localStorage.setItem(proofKey, 'yes');
-        }
-      }, 2200);
-    }
-  
-    // 2. AOS (Animate on Scroll) Init
-    if (window.AOS) AOS.init();
-  
-    // 3. Scroll-to-top Button
-    const goToTopBtn = document.getElementById('goToTopBtn');
-    if (goToTopBtn) {
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          goToTopBtn.classList.remove('d-none');
-        } else {
-          goToTopBtn.classList.add('d-none');
-        }
-      });
-      goToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-  
-    // 4. Rotate Project Images on Click
-    document.querySelectorAll('.project-img').forEach(img => {
-      img.addEventListener('click', () => {
-        img.style.transition = 'transform 0.4s ease-in-out';
-        img.style.transform = 'rotate(360deg)';
-        setTimeout(() => { img.style.transform = 'rotate(0deg)'; }, 400);
-      });
-    });
-  });
-  </script>
-  
-  
+    const darkModeBtn = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    const body = document.body;
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('.stat-number').forEach(function (el) {
-      let target = +el.getAttribute('data-count');
-      let count = 0, increment = Math.ceil(target/70);
-      let interval = setInterval(() => {
-        count += increment;
-        if(count >= target) { el.textContent = target; clearInterval(interval);}
-        else { el.textContent = count; }
-      }, 20);
-    });
-  });
-  </script>
-  
-
-<script>
-  // Dynamic year
-  document.getElementById('copyright-year').textContent = new Date().getFullYear();
-</script>
-
-<!-- Go to Top Button -->
-<button type="button" id="goToTopBtn" class="btn btn-danger position-fixed bottom-0 end-0 m-3 d-none"
-  aria-label="Scroll to top" data-bs-toggle="tooltip" data-bs-placement="left" title="Back to Top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    AOS.init();
-
-    // Bootstrap tooltip for the button
-    const goToTopBtn = document.getElementById('goToTopBtn');
-    if (goToTopBtn) {
-      var tooltip = new bootstrap.Tooltip(goToTopBtn);
+    // Set state if user visited before
+    if (localStorage.getItem('dark-mode') === 'on') {
+      body.classList.add('dark-mode');
+      darkModeIcon.textContent = '☀️';
     }
 
-    // Scroll to top button
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        goToTopBtn.classList.remove('d-none');
-        goToTopBtn.classList.add('show');
+    darkModeBtn.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+      if(body.classList.contains('dark-mode')) {
+        darkModeIcon.textContent = '☀️';
+        localStorage.setItem('dark-mode', 'on');
       } else {
-        goToTopBtn.classList.remove('show');
-        goToTopBtn.classList.add('d-none');
+        darkModeIcon.textContent = '🌙';
+        localStorage.setItem('dark-mode', 'off');
       }
     });
-
-    goToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Rotate project images on click
-    document.querySelectorAll('.project-img').forEach(img => {
-      img.addEventListener('click', () => {
-        img.style.transition = 'transform 0.4s cubic-bezier(.4,2,.4,1)';
-        img.style.transform = 'rotate(360deg)';
-        setTimeout(() => { img.style.transform = 'rotate(0deg)'; }, 400);
-      });
-    });
   });
 </script>
+  
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Shfaq popup pas 7 sekondash nëse nuk është mbyllur më parë nga përdoruesi
+    setTimeout(function() {
+      if(!localStorage.getItem('newsletter_popup_closed')) {
+        document.getElementById('newsletter-popup').classList.remove('d-none');
+      }
+    }, 7000);
+  
+    // Mbyll popup dhe ruaj në localStorage
+    document.getElementById('close-newsletter').onclick = function() {
+      document.getElementById('newsletter-popup').classList.add('d-none');
+      localStorage.setItem('newsletter_popup_closed', 'yes');
+    };
+  
+    // Opsionale: Hide popup on submit
+    document.getElementById('newsletter-form').onsubmit = function() {
+      document.getElementById('newsletter-popup').classList.add('d-none');
+      localStorage.setItem('newsletter_popup_closed', 'yes');
+      return true; // ose false nëse do AJAX
+    };
+  });
+  </script>
+  
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let testimonialCarousel = document.getElementById('testimonialsCarousel');
+    if (testimonialCarousel) {
+      let carousel = new bootstrap.Carousel(testimonialCarousel, {
+        interval: 6500,
+        ride: 'carousel',
+        pause: 'hover'
+      });
+    }
+  });
+  </script>
+  
+<!-- Scripts -->
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/stickyNavbar.js"></script>
+<script src="/assets/js/socialPopup.js"></script>
+<script src="/assets/js/stats.js"></script>
+<script src="/assets/js/dynamicYear.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+<script src="/assets/js/goToTop.js"></script>
+<script type="text/javascript" src="/assets/js/liveChat.js"></script>
 
 </body>
 </html>

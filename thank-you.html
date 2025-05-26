@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You!</title>
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(120deg, #fff 0%, #f5eaea 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: #3f2323;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 2.6rem 1.5rem 2.2rem 1.5rem;
+      border-radius: 1.7rem;
+      box-shadow: 0 8px 32px 0 rgba(190, 33, 33, 0.07), 0 1.5px 10px rgba(60,60,60,0.07);
+      max-width: 420px;
+      margin: auto;
+    }
+    h2 {
+      color: #be2121;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      letter-spacing: 1px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 2.1rem;
+      border-radius: 1.7rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.17s, color 0.17s;
+      box-shadow: 0 4px 18px 0 rgba(190,33,33,0.09);
+    }
+    .btn-danger, .btn-danger:visited {
+      background: #be2121;
+      color: #fff;
+      border: none;
+    }
+    .btn-danger:hover, .btn-danger:focus {
+      background: #a61717;
+      color: #fff;
+      text-decoration: none;
+    }
+    .text-muted {
+      color: #7b6868 !important;
+      font-size: 1.07rem;
+    }
+    .text-center {
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.2rem 0.3rem 1.5rem 0.3rem;
+        max-width: 97vw;
+      }
+      h2 { font-size: 1.38rem;}
+    }
+    </style>
+    
+</head>
+<body>
+  <div class="container text-center" style="margin-top:70px;">
+    <h2 class="fw-bold mb-3">Thank you for subscribing! 🎉</h2>
+    <p class="mb-4">Your free ebook is ready to download:</p>
+    <a href="/assets/pdf/ebooks/mxtech-ebook.pdf.pdf" class="btn btn-danger btn-lg" download>Download Ebook (PDF)</a>
+    <p class="mt-4 text-muted">Or check your email for future updates and offers!</p>
+  </div>
+</body>
+</html>
