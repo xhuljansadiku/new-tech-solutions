@@ -141,7 +141,7 @@
     <main>
       <!-- Header Section -->
       <header class="main-header bg-white py-5">
-        <div class="container">
+        <div class="container mt-5">
           <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start" data-aos="fade-up">
               <h1 class="fw-bold mb-3 brand-title">
@@ -396,7 +396,6 @@
       </div>
     </section>
     
-
     <!-- Work Section -->
     <section id="projects" class="py-5">
       <div class="container">
@@ -1075,18 +1074,36 @@
       </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter py-4 bg-light">
-      <div class="container text-center">
-        <form action="#" method="POST" class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
-          <input type="email" name="email" class="form-control w-auto" placeholder="Your email address" required style="max-width:240px;">
+        <!-- Newsletter Form -->
+    <div class="newsletter-wrapper">
+      <div>
+        <form id="newsletter-form">
+          <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="Your email address" required>
           <button type="submit" class="btn btn-primary px-4">Subscribe</button>
         </form>
-        <div class="mt-2 small text-muted">Get tips & digital news. No spam!</div>
+        <div id="newsletter-success" class="text-success mt-2" style="display:none;">Thank you for subscribing!</div>
       </div>
-        </section>
+    </div>
+        
+    <!-- Newsletter Popup -->
+    <div id="newsletter-popup" class="newsletter-popup d-none" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:9999; display:flex; align-items:center; justify-content:center;">
+      <div class="newsletter-content" style="background:#fff; border-radius:12px; padding:2rem 2.5rem; max-width:350px; width:100%; box-shadow:0 2px 16px rgba(0,0,0,0.15); position:relative;">
+        <button class="close-btn" id="close-newsletter" aria-label="Close" style="position:absolute; top:14px; right:18px; border:none; background:transparent; font-size:2rem; color:#888; cursor:pointer;">&times;</button>
+        <h4 class="fw-bold mb-2" style="font-weight:700; font-size:1.5rem; margin-bottom:1rem;">Subscribe <br> & <br> Get a Free Ebook <br> or <br> <span style="color: #be2121;">10% OFF!</span></h4>
+        <p class="mb-3 text-muted fs-6" style="color:#777; font-size:1rem; margin-bottom:1.5rem;">Join our newsletter to receive the latest updates and get your freebie instantly in your inbox.</p>
+        <form id="newsletter-popup-form">
+          <input type="email" name="email" class="form-control mb-2" placeholder="Your email address" required style="margin-bottom:12px; padding:10px 12px; width:100%; border-radius:6px; border:1px solid #ccc;">
+          <button type="submit" class="btn btn-danger w-100 fw-bold" style="padding: 11px 0; background:#be2121; border:none; color:white; border-radius:6px; font-weight:600; width:100%;">Get My Free Ebook!</button>
+          <div class="form-check mt-3" style="margin-top:12px; text-align:left;">
+            <input class="form-check-input" type="checkbox" value="yes" id="ebook-checkbox" checked disabled>
+            <label class="form-check-label" for="ebook-checkbox">
+              Receive a free ebook or 10% discount on your first service.
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
 
-    
     <!-- Optional: Add Animate.css CDN for nice fade in on success message -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script>
@@ -1120,38 +1137,6 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Newsletter Popup -->
-    <div id="newsletter-popup" class="newsletter-popup d-none">
-      <div class="newsletter-content">
-        <button class="close-btn" id="close-newsletter" aria-label="Close">&times;</button>
-        <h4 class="fw-bold mb-2">Subscribe & Get a Free Ebook or <span class="text-danger">10% OFF!</span></h4>
-        <p class="mb-3 text-muted fs-6">Join our newsletter to receive the latest updates and get your freebie instantly in your inbox.</p>
-        <form action="https://formsubmit.co/needx00@gmail.com" method="POST" id="newsletter-form">
-          <!-- Hidden fields for FormSubmit settings -->
-          <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
-          <input type="hidden" name="_subject" value="New Newsletter Signup!">
-          <input type="hidden" name="_autoresponse"
-            value="Thank you for subscribing to MX Tech Solutions! 🎉
-
-    Your free ebook is ready to download:
-    https://drive.google.com/file/d/1olbzft1wd79wlP-FEb9gKqwO0TPj5bWV/view?usp=drive_link
-
-    You will receive updates and exclusive offers soon.
-
-    Best regards,
-    MX Tech Solutions Team">
-          <!-- Email field -->
-          <input type="email" name="email" class="form-control mb-2" placeholder="Your email address" required>
-          <button type="submit" class="btn btn-danger w-100 fw-bold">Get My Free Ebook!</button>
-          <div class="form-check mt-3">
-            <input class="form-check-input" type="checkbox" value="yes" id="ebook-checkbox" checked disabled>
-            <label class="form-check-label" for="ebook-checkbox">
-              Receive a free ebook or 10% discount on your first service.
-            </label>
-          </div>
-        </form>
-      </div>
-    </div>
 </main>
 
 <!-- Footer -->
@@ -1217,8 +1202,6 @@
   </div>
 </footer>
 
-
-  
 <!-- Scripts -->
 <script src="assets/js/darkMode.js"></script>
 <script src="assets/js/newsletter.js"></script>
@@ -1232,6 +1215,6 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
 <script src="assets/js/goToTop.js"></script>
 <script type="text/javascript" src="assets/js/liveChat.js"></script>
-
+ 
 </body>
 </html>
