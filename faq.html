@@ -1,66 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Newsletter | MX Tech Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Choose from our website packages – standard, premium, or ultimate – to fit your business needs and budget.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="assets/images/faviconnew.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Navbar -->
-  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-none fixed-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img 
-          src="assets/images/black-logo-transparent.png" 
-          alt="MX Tech Solutions Logo" 
-          width="40" height="40" loading="lazy"
-          class="navbar-logo"
-        >
-        <span class="ms-2 fw-bold brand-text">MX TECH SOLUTIONS</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
-              <li><a class="dropdown-item" href="web-design.html">Web Design</a></li>
-              <li><a class="dropdown-item" href="social-media.html">Social Media</a></li>
-              <li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>
-              <li><a class="dropdown-item" href="video-editing.html">Video Editing</a></li>
-              <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <!-- Standard favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    
+    <!-- Apple Touch Icon për iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    
+    <!-- Android Manifest -->
+    <link rel="manifest" href="/assets/images/site.webmanifest">
+    
+    <!-- Safari Pinned Tab -->
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#be2121">
+    
+    <!-- Meta për Microsoft/Windows -->
+    <meta name="msapplication-TileColor" content="#be2121">
+    <meta name="theme-color" content="#be2121">
+    
+    
+    
+    <title>Faq. | MX Tech Solutions</title>
+    
+      <meta name="description" content="MX Tech Solutions offers expert web development, design, SEO, and digital marketing services in Manchester. Contact us to bring your vision to life.">
+      <meta name="keywords" content="web development, web design, SEO, Shopify, e-commerce, custom web applications, UI/UX design, responsive design, graphic design, branding, prototyping, content creation, community management, influencer marketing, social media ads, analytics, pay-per-click, email marketing, content marketing, video editing, editing and post-production, color correction, motion graphics, sound design, visual effects, mobile app development, cloud solutions, AI, machine learning, cybersecurity, Manchester">
+      <meta name="author" content="MX Tech Solutions">
+      <meta name="robots" content="index, follow">
+      <meta name="theme-color" content="#ffffff">
+      <link rel="canonical" href="https://mx-techsolutions.co.uk/">
+      <!-- Open Graph / Twitter -->
+      <meta property="og:title" content="MX Tech Solutions">
+      <meta property="og:description" content="Expert web development, design, SEO, and digital marketing services in Manchester.">
+      <meta property="og:url" content="https://mx-techsolutions.co.uk">
+      <meta property="og:image" content="https://mx-techsolutions.co.uk/assets/images/mx-techsolutions.png">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="MX Tech Solutions">
+      <meta name="twitter:description" content="Expert web development, design, SEO, and digital marketing services in Manchester.">
+      <meta name="twitter:url" content="https://mx-techsolutions.co.uk">
+      <meta name="twitter:image" content="https://mx-techsolutions.co.uk/assets/images/mx-techsolutions.jpg">
+    
+      <!-- Bootstrap 5 CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Font Awesome 6 -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+      <!-- AOS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+      <!-- Custom Styles -->
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!-- Favicon -->
+      <link rel="icon" href="assets/images/faviconnew.png">
+    
+      <!-- Local Business Schema -->
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "MX Tech Solutions",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "336 Clippers Quay",
+          "addressLocality": "Manchester",
+          "postalCode": "M50 3BN",
+          "addressCountry": "UK"
+        },
+        "telephone": "+447478626032",
+        "url": "https://mx-techsolutions.co.uk"
+      }
+      </script>
+      <!-- Google Analytics (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHCZHHHJQD"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FHCZHHHJQD');
+      </script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    
+    </head>
+    <body>
+      
+      <!-- Navbar -->
+      <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-none fixed-top">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img 
+              src="assets/images/black-logo-transparent.png" 
+              alt="MX Tech Solutions Logo" 
+              width="40" height="40" loading="lazy"
+              class="navbar-logo"
+            >
+            <span class="ms-2 fw-bold brand-text">MX TECH SOLUTIONS</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+                  <li><a class="dropdown-item" href="web-design.html">Web Design</a></li>
+                  <li><a class="dropdown-item" href="social-media.html">Social Media</a></li>
+                  <li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>
+                  <li><a class="dropdown-item" href="video-editing.html">Video Editing</a></li>
+                  <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="work.html">Work</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item ms-lg-2">
+                <a class="btn btn-danger px-3" href="start-a-project.html" role="button">Start a project 📝</a>
+              </li>
             </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="work.html">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-2">
-            <a class="btn btn-danger px-3" href="start-a-project.html" role="button">Start a project 📝</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- /Navbar -->
-
-  <main style="padding-top: 90px;">
-     
-  <!-- FAQ Section -->
-  <section id="faq" class="py-5 bg-light">
+          </div>
+        </div>
+      </nav>
+      <!-- /Navbar -->
+    
+          <!-- Dark Mode Toggle Button (floating, always visible) 
+        <button id="darkModeToggle" class="btn btn-outline-dark position-fixed"
+        style="top: 28px; right: 32px; z-index: 1051; border-radius: 1.4rem; padding: 0.44rem 1.2rem; box-shadow: 0 2px 14px 0 rgba(60,60,60,0.09);">
+        <span id="darkModeIcon" style="font-size:1.2rem;">🌙</span>
+        </button>
+        -->
+    
+    
+        <main>
+    
+          <!-- FAQ Section -->
+  <section id="faq" class="py-5 bg-light mt-5">
     <div class="container">
       <h2 class="text-center fw-bold mb-4" data-aos="fade-up">FAQ 🤔</h2>
       <div class="row justify-content-center">
@@ -211,82 +292,106 @@
       </div>
     </div>
   </section>
-  
-  </main>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-light py-5 mt-5">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-3">
-          <h6 class="mb-3">MX TECH Solutions</h6>
-          <p class="small">We're here to bring your web vision to life with expertise and innovation.<br>
-          <span class="text-success">Proudly serving clients in the UK and worldwide.</span></p>
-          <img src="assets/images/small-icon.png" width="80" alt="logo" loading="lazy">
+        <!-- Social Proof Popup -->
+        <div id="social-proof-popup" class="social-proof-popup">
+          <i class="fas fa-bolt text-warning"></i>
+          <span id="proof-message"></span>
         </div>
-        <div class="col-md-3">
-          <h6 class="mb-3">Services</h6>
-          <ul class="list-unstyled small">
-            <li><a href="web-development.html" class="text-light">Web Development 💻</a></li>
-            <li><a href="web-design.html" class="text-light">Web Design 🎨</a></li>
-            <li><a href="social-media.html" class="text-light">Social Media 📱</a></li>
-            <li><a href="digital-marketing.html" class="text-light">Digital Marketing 📊</a></li>
-            <li><a href="video-editing.html" class="text-light">Video Editing 🎥</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h6 class="mb-3">Useful Links</h6>
-          <ul class="list-unstyled small">
-            <li><a href="services.html" class="text-light">Services 🌟</a></li>
-            <li><a href="work.html" class="text-light">Work 🛠️</a></li>
-            <li><a href="about.html" class="text-light">About 😊</a></li>
-            <li><a href="packages.html" class="text-light">Packages 📦</a></li>
-            <li><a href="blog.html" class="text-light">Blog ✍️</a></li>
-            <li><a href="testimonials.html" class="text-light">Testimonials ⭐</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h6 class="mb-3">Contact</h6>
-          <ul class="list-unstyled small">
-            <li><i class="fas fa-home me-2"></i>336 Clippers Quay, M50 3BN, UK</li>
-            <li><i class="fas fa-envelope me-2"></i>
-              <a href="mailto:contact.mxtech@gmail.com" class="text-light">contact.mxtech@gmail.com</a></li>
-            <li><i class="fas fa-phone me-2"></i>
-              <a href="tel:+447478626032" class="text-light">+44 7478 626032</a></li>
-          </ul>
-          <div class="mt-3 d-flex gap-3">
-            <a href="https://www.instagram.com/mxtechsolutions/" target="_blank" aria-label="Instagram" class="footer-social">
-              <img src="assets/images/instagram.png" alt="Instagram" width="28" loading="lazy">
-            </a>
-            <a href="https://www.linkedin.com/company/mxtechsolutions/" target="_blank" aria-label="LinkedIn" class="footer-social">
-              <img src="assets/images/linkedin.png" alt="LinkedIn" width="28" loading="lazy">
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" class="footer-social">
-              <img src="assets/images/facebook.png" alt="Facebook" width="28" loading="lazy">
-            </a>
+    
+        <!-- Go to Top Button -->
+        <button type="button" id="goToTopBtn" class="btn btn-danger position-fixed bottom-0 end-0 m-3 d-none"
+          aria-label="Scroll to top" data-bs-toggle="tooltip" data-bs-placement="left" title="Back to Top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+    
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-3">
+            <h6 class="mb-3">MX TECH Solutions</h6>
+            <p class="small">We're here to bring your web vision to life with expertise and innovation.<br>
+            <span class="text-success">Proudly serving clients in the UK and worldwide.</span></p>
+            <img src="assets/images/small-icon.png" width="80" alt="logo" loading="lazy">
+          </div>
+          <div class="col-md-3">
+            <h6 class="mb-3">Services</h6>
+            <ul class="list-unstyled small">
+              <li><a href="web-development.html" class="text-light">Web Development 💻</a></li>
+              <li><a href="web-design.html" class="text-light">Web Design 🎨</a></li>
+              <li><a href="social-media.html" class="text-light">Social Media 📱</a></li>
+              <li><a href="digital-marketing.html" class="text-light">Digital Marketing 📊</a></li>
+              <li><a href="video-editing.html" class="text-light">Video Editing 🎥</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="mb-3">Useful Links</h6>
+            <ul class="list-unstyled small">
+              <li><a href="services.html" class="text-light">Services 🌟</a></li>
+              <li><a href="work.html" class="text-light">Work 🛠️</a></li>
+              <li><a href="about.html" class="text-light">About 😊</a></li>
+              <li><a href="packages.html" class="text-light">Packages 📦</a></li>
+              <li><a href="blog.html" class="text-light">Blog ✍️</a></li>
+              <li><a href="testimonials.html" class="text-light">Testimonials ⭐</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="mb-3">Contact</h6>
+            <ul class="list-unstyled small">
+              <li><i class="fas fa-home me-2"></i>336 Clippers Quay, M50 3BN, UK</li>
+              <li><i class="fas fa-envelope me-2"></i>
+                <a href="mailto:contact.mxtech@gmail.com" class="text-light">contact.mxtech@gmail.com</a></li>
+              <li><i class="fas fa-phone me-2"></i>
+                <a href="tel:+447478626032" class="text-light">+44 7478 626032</a></li>
+            </ul>
+            <div class="mt-3 d-flex gap-3">
+              <a href="https://www.instagram.com/mxtechsolutions/" target="_blank" aria-label="Instagram" class="footer-social">
+                <img src="assets/images/instagram.png" alt="Instagram" width="28" loading="lazy">
+              </a>
+              <a href="https://www.linkedin.com/company/mxtechsolutions/" target="_blank" aria-label="LinkedIn" class="footer-social">
+                <img src="assets/images/linkedin.png" alt="LinkedIn" width="28" loading="lazy">
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" class="footer-social">
+                <img src="assets/images/facebook.png" alt="Facebook" width="28" loading="lazy">
+              </a>
+            </div>
           </div>
         </div>
+        <hr class="border-secondary mt-5">
+        <div class="text-center pt-2 small">
+          <small>&copy; <span id="copyright-year"></span> <a href="https://mx-techsolutions.co.uk/" class="text-light">MX Tech Solutions</a>
+            | <a href="privacy-policy.html" class="text-light">Privacy Policy</a>
+            | <a href="faq.html" class="text-light">FAQs</a>
+          </small>
+        </div>
       </div>
-      <hr class="border-secondary mt-5">
-      <div class="text-center pt-2 small">
-        <small>&copy; <span id="copyright-year"></span> <a href="https://mx-techsolutions.co.uk/" class="text-light">MX Tech Solutions</a>
-          | <a href="privacy-policy.html" class="text-light">Privacy Policy</a>
-          | <a href="faq.html" class="text-light">FAQs</a>
-        </small>
-      </div>
-    </div>
-  </footer>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="assets/js/darkMode.js"></script>
+    <script src="assets/js/newsletter.js"></script>
+    <script src="assets/js/testimonials.js"></script>
+    <script src="assets/js/faq.js"></script>
+    <script src="assets/js/stickyNavbar.js"></script>
+    <script src="assets/js/socialPopup.js"></script>
+    <script src="assets/js/stats.js"></script>
+    <script src="assets/js/dynamicYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/goToTop.js"></script>
+    <script type="text/javascript" src="assets/js/liveChat.js"></script>
+     
+    </body>
+    </html>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      if (window.AOS) AOS.init();
-      // Dynamic year in footer
-      var y = document.getElementById('copyright-year');
-      if (y) y.textContent = new Date().getFullYear();
-    });
-  </script>
-</body>
-</html>
+ 
+
+
+
+
+
+  
+  
