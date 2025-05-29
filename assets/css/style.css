@@ -947,6 +947,23 @@ body.dark-mode .text-muted {
 
   
   /* Projects (Work) */
+
+/* make all project images 150×150 */
+.project-img-wrapper {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto; /* center within the card */
+}
+
+.project-img-wrapper .project-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+
   #projects .project-card {
     border-radius: 1.2rem;
     box-shadow: 0 2px 12px 0 rgba(211,62,69,0.06);
@@ -1331,6 +1348,14 @@ body.dark-mode .text-muted {
   
   
   /* Contact */
+
+  /* make the #expertise select use danger on hover */
+#expertise.form-select:hover {
+  border-color: var(--bs-danger) !important;
+  box-shadow: 0 0 0 .2rem rgba(var(--bs-danger-rgb), .25) !important;
+}
+
+
 /* Contact Form Upgrade Styles */
 .contact-form-upgrade {
     border-radius: 1.3rem;
